@@ -1,0 +1,39 @@
+.sales {
+  background: rgba(245, 222, 179, 0.47);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.sales-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 500px;
+  height: 300px;
+  background: rgba(201, 134, 52, 0.7);
+  border-radius: 20px;
+  padding: 30px 30px;
+}
+
+.sales-upText {
+  margin-bottom: 10px;
+}
+
+.sales-downText {
+  margin-top: 10px;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.sales-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 500px;
+  height: 300px;
+  background: rgba(52, 201, 77, 0.7);
+  border-radius: 20px;
+  padding: 30px 30px;
+}
