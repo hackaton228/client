@@ -1,14 +1,19 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
+import CategoryId from "../pages/CategoryId/CategoryId";
+import {categories} from "../lib/backendData";
 
 const AppRouter = () => {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<HomePage/>} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage/>} />
+      {categories.map((r) => {
+        return (
+          <Route path={`/category/${r.id}`} element={<CategoryId/>} />
+        )
+      })}
+    </Routes>
   );
 };
 
