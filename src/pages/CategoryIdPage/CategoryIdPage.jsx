@@ -1,13 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import './CategoryIdPage.scss'
 import {useParams} from "react-router-dom";
-import {categories, subCategories} from "../../lib/backendData";
+import Api from "../../Api";
 
 const CategoryIdPage = () => {
   const params = useParams();
-  const cat = categories.filter((category) => category.id === parseInt(params['1']))[0]
-  const sub_cut_ids = cat.sub_cat_ids
-  const sub_cut = subCategories.filter((subCategory) => sub_cut_ids.includes(subCategory.id))
+  
+  const [cut, setCut] = useState([]);
+  
+  useEffect(() => {
+    Api.Store.getOneCategory(parseInt(params[1])).then((response) => {setCut(response.data)})
+  }, []);
+  
+  console.log(cut)
   
   // const sub_cat = filter((category) => category.id === parseInt(params['1']))[0]
 

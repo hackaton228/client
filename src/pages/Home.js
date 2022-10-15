@@ -5,9 +5,8 @@ import Categories from "../../src/components/categories/Categories";
 const Home = () => {
   return (
     <>
-      <Header></Header>
-
-      <Categories></Categories>
+      <Header/>
+      <Categories/>
     </>
   );
 };

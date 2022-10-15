@@ -1,36 +1,28 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./Categories.scss";
+import Api from "../../Api";
+import {Link} from "react-router-dom";
 
 const Categories = () => {
+  
+  const [cut, setCut] = useState([]);
+  
+  useEffect(() => {
+    Api.Store.getAllCategory().then((response) => {setCut(response.data)})
+  }, []);
+  
+  
   return (
     <div className="categories">
-      <a href="">
-        <div className="category__button">Акции</div>
-      </a>
-      <a href="">
-        <div className="category__button">Электроника</div>
-      </a>
-      <a href="">
-        <div className="category__button">Компьютеры и сети</div>
-      </a>
-      <a href="">
-        <div className="category__button">Бытовая техника</div>
-      </a>
-      <a href="">
-        <div className="category__button">Стройка и ремонт</div>
-      </a>
-      <a href="">
-        <div className="category__button">Дом и сад</div>
-      </a>
-      <a href="">
-        <div className="category__button">Авто и мото</div>
-      </a>
-      <a href="">
-        <div className="category__button">Красота и спорт</div>
-      </a>
-      <a href="">
-        <div className="category__button">Детям и мамам</div>
-      </a>
+      {cut.map((c) => {
+        return (
+          <div>
+            <Link to={`/category/${c.id}`}>
+              <div className="category__button">{c.title}</div>
+            </Link>
+          </div>
+        )
+      })}
     </div>
   );
 };

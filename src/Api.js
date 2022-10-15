@@ -4,75 +4,57 @@ axios.defaults.baseURL = 'http://localhost:3001/api/'
 
 const Auth = {
   register: (email, password) => {
-    const res = axios.post('user/registration', {
+    return axios.post('user/registration', {
       email: email,
       password: password
-    })
-
-    return res;
+    });
   },
 
   login: (email, password) => {
-    const res = axios.post('user/login', {
+    return axios.post('user/login', {
       email: email,
       password: password,
-    })
-
-    return res;
+    });
   },
 
   check: () => {
-    const res = axios.get('user/auth', {
+    return axios.get('user/auth', {
       headers: {
         authorization: localStorage.getItem('token')
       }
     })
-
-    return res
   }
 }
 
 const Store = {
   createType: (name) => {
-    const res = axios.post('type/')
-
-    return res
+    return axios.post('type/')
   },
 
   getAllTypes: () => {
-    const res = axios.get('type/')
-
-    return res
+    return axios.get('type/')
   },
 
   createBrand: (name) => {
-    const res = axios.post('brand/', {
+    return axios.post('brand/', {
       name: name
     })
-
-    return res
   },
 
   getAllBrands: () => {
-    const res = axios.get('brand/')
-
-    return res
+    return axios.get('brand/')
   },
 
   getAllCategory: () => {
-    const res = axios.get('category/')
-
-    return res
+    return axios.get('category/')
   },
 
   getOneCategory: (id) => {
-    const res = axios.get(`category/${id}`)
-
-    return res
+    return axios.get(`category/${id}`)
   },
 
   createProduct: (name, price, brandId, typeId, info, img) => {
-    const res = axios.post('product/', {
+    return axios.post('product/', {
       name: name,
       info: info,
       img: img,
@@ -80,32 +62,22 @@ const Store = {
       typeId: typeId,
       price: price
     })
-
-    return res
   },
 
   getAllProducts: () => {
-    const res = axios.get(`product/`)
-
-    return res
+    return axios.get(`product/`)
   },
 
   getOneProducts: (id) => {
-    const res = axios.get(`product/${id}`)
-
-    return res
+    return axios.get(`product/${id}`)
   },
 
   getAllSubCategory: () => {
-    const res = axios.get('sub-cat/')
-
-    return res
+    return axios.get('sub-cat/')
   },
 
   getOneSubCategory: (id) => {
-    const res = axios.get(`sub-cat/${id}`)
-
-    return res
+    return axios.get(`sub-cat/${id}`)
   }
 }
 
