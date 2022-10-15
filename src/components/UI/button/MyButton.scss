@@ -1,4 +1,4 @@
-.MyButton {
+.my-button {
   text-decoration: none;
   color: white;
   padding: 10px 10px;
@@ -11,8 +11,9 @@
   transition: .8s cubic-bezier(.165, .84, .44, 1);
   background: #b4b4b4;
   width: 150px;
+  cursor: pointer;
 }
-.MyButton:hover {
+.my-button:hover {
   color: #5d5d5d;
   background: wheat;
 }
