@@ -1,6 +1,7 @@
 import React from "react";
 import "./header.scss";
 import MyInput from "../UI/input/MyInput";
+import {Link} from "react-router-dom";
 import offliner_logo from "../../img/offliner_logo.png";
 
 const Header = () => {
@@ -21,7 +22,7 @@ const Header = () => {
         </button>
       </div>
 
-      <div className="header-userMenu">Market - profile</div>
+      <Link to='/auth' className="header-userMenu">Market - profile</Link>
     </nav>
   );
 };
