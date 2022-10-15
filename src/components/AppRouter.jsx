@@ -1,7 +1,7 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
-import HomePage from "../pages/HomePage";
 import Reg from "./auth/reg/reg";
+import HomePage from "../pages/HomePage/HomePage";
 
 const AppRouter = () => {
   return (
