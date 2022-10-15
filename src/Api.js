@@ -1,11 +1,10 @@
 import axios from "axios";
 
-axios.defaults.baseURL = 'http://localhost:5001/api/'
+axios.defaults.baseURL = 'http://localhost:3001/api/'
 
 const Auth = {
-  register: (username, email, password) => {
-    const res = axios.post('user/register', {
-      username: username,
+  register: (email, password) => {
+    const res = axios.post('user/registration', {
       email: email,
       password: password
     })
