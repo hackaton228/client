@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.scss";
+import "./header.scss";
 import "../../style.scss";
 
 import logo from "../../images/header/offliner_logo.svg";
@@ -7,6 +7,7 @@ import search from "../../images/header/search_icon.svg";
 import cart from "../../images/header/cart_icon.svg";
 import like from "../../images/header/like_icon.svg";
 import profile from "../../images/header/user_icon.svg";
+import {Link} from "react-router-dom";
 
 const Header = () => {
   return (
@@ -33,9 +34,9 @@ const Header = () => {
         <a href="">
           <img src={cart} alt="" />
         </a>
-        <a href="">
+        <Link to="/auth">
           <img src={profile} alt="" />
-        </a>
+        </Link>
       </div>
     </div>
   );

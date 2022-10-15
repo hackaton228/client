@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import './reg.scss'
-import jwtDecode from "jwt-decode";
 import {Link, useNavigate} from 'react-router-dom'
 import Api from "../../../Api";
 
@@ -13,12 +12,14 @@ const Reg = () => {
   const changeForm = () => {
     setIsReg(!isReg)
   }
-
+  
+  // REACT TOP!!!!!!!!!!
+  
   const Submit = (e) => {
     e.preventDefault();
     if(isReg === false) {
       Api.Auth.register(email, password)
-        .then(response => {
+        .then(() => {
           setIsReg(true);
         })
         .catch(e => {

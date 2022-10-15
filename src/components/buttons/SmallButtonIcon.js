@@ -1,5 +1,5 @@
 import React from "react";
-import "./SmallButtonIcon.scss";
+import "./smallButtonIcon.scss";
 
 const SmallButtonIcon = ({ text, icon, onClick, onMouseOver }) => {
   return (

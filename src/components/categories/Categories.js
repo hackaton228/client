@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import "./Categories.scss";
+import "./categories.scss";
 import Api from "../../Api";
 import {Link} from "react-router-dom";
 
@@ -10,7 +10,6 @@ const Categories = () => {
   useEffect(() => {
     Api.Store.getAllCategory().then((response) => {setCut(response.data)})
   }, []);
-  
   
   return (
     <div className="categories">

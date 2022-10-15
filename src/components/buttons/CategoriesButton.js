@@ -1,5 +1,5 @@
 import React from "react";
-import "./CategoriesButton.scss";
+import "./categoriesButton.scss";
 
 const CategoriesButton = ({ text, icon, onClick, style }) => {
   return (

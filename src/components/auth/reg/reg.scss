@@ -11,12 +11,17 @@
     display: flex;
     flex-direction: column;
     width: 500px;
-    background: orange;
+    background: #eaeaea;
     height: 300px;
+
+    padding: 25px 25px 50px 25px;
+    border-radius: 30px;
   }
 
   &__title {
-    color: #f5f5f7;
+    font-family: Open Sans;
+
+    color: #000000;
     text-align: center;
     padding: 20px 10px;
     font-weight: 700;
@@ -24,9 +29,11 @@
   }
 
   &__label {
+    font-family: Open Sans;
+
+    color: #000000;
     padding: 0px 10px;
     margin-bottom: 2px;
-    color: #f5f5f7;
     font-weight: 700;
   }
 
@@ -43,7 +50,29 @@
   }
 
   &__link {
-    text-decoration: none;
     color: #f5f5f7;
+
+    color: black;
+    text-decoration: none;
+    font-family: Open Sans;
+  }
+
+  &__button {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background: #f5f5f7;
+    border: 0 solid #ffffff;
+    font-size: 14px;
+    color: black;
+    font-family: Open Sans, serif;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.2s;
+      background: #989898;
+      color: white;
+    }
   }
 }

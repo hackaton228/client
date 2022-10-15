@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './CategoryIdPage.scss'
+import './categoryIdPage.scss'
 import {useParams} from "react-router-dom";
 import Api from "../../Api";
 
