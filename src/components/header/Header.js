@@ -1,39 +1,40 @@
-import React from "react";
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
+import SearchField from "../searchField/SearchField";
+import logo from "../../images/offliner_logo.svg";
+import cart from "../../images/cart_icon.svg";
+import like from "../../images/like_icon.svg";
+import profile from "../../images/user_icon.svg";
 import "./header.scss";
-import "../../style.scss";
-
-import logo from "../../images/header/offliner_logo.svg";
-import search from "../../images/header/search_icon.svg";
-import cart from "../../images/header/cart_icon.svg";
-import like from "../../images/header/like_icon.svg";
-import profile from "../../images/header/user_icon.svg";
-import {Link} from "react-router-dom";
 
 const Header = () => {
+  let interval;
+  const [search, setSearch] = useState('');
+  
+  const searchChange = (e) => {
+    clearInterval(interval)
+    interval = setTimeout(() => {
+      setSearch(e.target.value)
+    }, 500)
+  }
+  
+  console.log(search)
+  
   return (
     <div className="header-container">
       <div className="header__logo">
-        <a href="/">
-          <img src={logo} alt="" />
-        </a>
+        <Link href="/">
+          <img src={logo} alt="offline" />
+        </Link>
       </div>
-
-      <div className="">
-        <form action="" className="">
-          <input type="text" className="header__search" />
-          <button className="header__button">
-            <img src={search} alt="" />
-          </button>
-        </form>
-      </div>
-
+      <SearchField value={search} onChange={searchChange}/>
       <div className="header__actions">
-        <a href="">
-          <img src={like} alt="" className="header__action-btn" />
-        </a>
-        <a href="">
+        <Link to="/">
+          <img src={like} alt="" />
+        </Link>
+        <Link to="/">
           <img src={cart} alt="" />
-        </a>
+        </Link>
         <Link to="/auth">
           <img src={profile} alt="" />
         </Link>
