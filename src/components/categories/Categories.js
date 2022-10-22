@@ -1,27 +1,23 @@
-import React, {useEffect, useState} from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { categories } from "../../lib/BackendData";
 import "./categories.scss";
-import Api from "../../Api";
-import {Link} from "react-router-dom";
 
 const Categories = () => {
+  const [cat, setCut] = useState(categories);
   
-  const [cut, setCut] = useState([]);
-  
-  useEffect(() => {
-    Api.Store.getAllCategory().then((response) => {setCut(response.data)})
-  }, []);
+  // useEffect(() => {
+  //   Api.Store.getAllCategory().then((response) => {setCut(response.data)})
+  // }, []);
   
   return (
     <div className="categories">
-      {cut.map((c) => {
-        return (
-          <div>
-            <Link to={`/category/${c.id}`}>
-              <div className="category__button">{c.title}</div>
-            </Link>
-          </div>
-        )
-      })}
+      {cat.map((c, id) => { return (
+          <Link href={`/category/${c.id}`} key={id}>
+            <div className="category__button">{c.title}</div>
+          </Link>
+        )})
+      }
     </div>
   );
 };
