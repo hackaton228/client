@@ -1,0 +1,21 @@
+.s-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @keyframes arrows {
+    0%,
+    100% {
+      color: #292D32;
+      transform: translateY(0);
+    }
+    50% {
+      color: #b43a3a;
+      transform: translateY(20px);
+    }
+  }
+
+  span {
+    --delay: 0s;
+    animation: arrows 1s var(--delay) infinite ease-in;
+  }
+}
