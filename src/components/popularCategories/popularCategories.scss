@@ -1,7 +1,8 @@
 .popular-categories {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
+  margin: 100px auto 0;
+  max-width: 1440px;
+  width: 100%;
+
 }
 
 .popular-categories_box {
@@ -46,5 +47,4 @@
   align-items: center;
   width: 300px;
   height: 230px;
-  background: rgba(141, 100, 100, 0.35);
 }

@@ -6,6 +6,8 @@ import "./categories.scss";
 const Categories = () => {
   const [cat, setCut] = useState(categories);
   
+  console.log(cat)
+  
   // useEffect(() => {
   //   Api.Store.getAllCategory().then((response) => {setCut(response.data)})
   // }, []);
@@ -13,7 +15,7 @@ const Categories = () => {
   return (
     <div className="categories">
       {cat.map((c, id) => { return (
-          <Link href={`/category/${c.id}`} key={id}>
+          <Link to={`/category/${c.id}`} key={id}>
             <div className="category__button">{c.title}</div>
           </Link>
         )})

@@ -18,7 +18,7 @@ const AppRouter = () => {
       )})
       }
       <Route path="/auth" element={<Reg from />} />
-      {/*<Route path="*" element={<Navigate to="/"/>} />*/}
+      <Route path="*" element={<Navigate to="/"/>} />
     </Routes>
   );
 };

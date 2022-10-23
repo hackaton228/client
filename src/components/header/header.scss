@@ -1,8 +1,16 @@
+.header {
+  background: white;
+  padding-top: 50px;
+}
+
 .header-container {
   background-color: #ffffff;
   height: 50px;
-  width: 1440px;
-  margin-top: 50px;
+  margin: auto;
+  max-width: 1440px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

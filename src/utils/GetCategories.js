@@ -18,10 +18,11 @@ function makeGetRandomElement(initialArray) {
 const getRandomElement = makeGetRandomElement(categories);
 const getRandomElementToBanner = makeGetRandomElement(ItemProduct);
 export const popularCat = []
-export const DecountElement = getRandomElementToBanner()
+export const DiscountElement = []
 
 for(let i = 0; i < 4; i++) {
   popularCat[i] = getRandomElement()
+  DiscountElement[i] = getRandomElementToBanner()
 }
 
 
