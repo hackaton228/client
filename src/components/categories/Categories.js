@@ -6,7 +6,7 @@ import "./categories.scss";
 const Categories = () => {
   const [cat, setCut] = useState(categories);
   
-  console.log(cat)
+  console.log("RENDER Categories")
   
   // useEffect(() => {
   //   Api.Store.getAllCategory().then((response) => {setCut(response.data)})
